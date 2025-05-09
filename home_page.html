@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>Ana Səhifə - Tələbə Sistemi</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background-color: #2e86de;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 24px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    header .logo {
+      font-size: 30px;
+      font-weight: bold;
+    }
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header nav a {
+      color: white;
+      padding: 16px 24px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    header nav a:hover {
+      background-color: #575757;
+    }
+    .profile-menu {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+    .profile-menu img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .profile-menu .username {
+      color: white;
+      font-size: 18px;
+    }
+    .sub-menu {
+      display: none;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background-color: white;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      width: 150px;
+      border-radius: 5px;
+      text-align: left;
+      z-index: 1;
+    }
+    .sub-menu a {
+      color: #333;
+      padding: 10px;
+      text-decoration: none;
+      display: block;
+      font-size: 16px;
+    }
+    .sub-menu a:hover {
+      background-color: #f0f0f0;
+      color: #2e86de;
+    }
+    .profile-menu.active .sub-menu {
+      display: block;
+    }
+    .hero-section {
+      background-image: url('https://via.placeholder.com/1500x600');/*Uni sekli*/
+      background-size: cover;
+      height: 600px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+      position: relative;
+    }
+    .hero-section h2 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    }
+    .hero-section p {
+      font-size: 24px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: #ffffff;
+      color: #333;
+    }
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .section p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+    .image-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .image-gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Tələbə Sistemi</div>
+    <nav>
+      <a href="home.html">Ana Səhifə</a>
+      <a href="about.html">Haqqımızda</a>
+      <a href="courses.html">Tədris Proqramları</a>
+      <a href="contact.html">Əlaqə</a>
+    </nav>
+    <div class="profile-menu" onclick="toggleMenu()">
+      <img src="https://via.placeholder.com/40" alt="Profil şəkli">
+      <div class="username">İsmayıl</div>
+      <div class="sub-menu">
+        <a href="dashboard.html" id="dashboard-link">Dashboard</a>
+        <a href="login.html" id="logout-link">Çıxış</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div>
+      <h2>Universitetə Xoş Gəlmisiniz</h2>
+      <p>Gələcəyiniz burada başlayır</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Haqqımızda</h2>
+    <p>
+      Biz, yüksək keyfiyyətli təhsil və müasir metodlarla tələbələrə bir çox imkanlar təqdim edirik. Universitetimizdə müxtəlif sahələrdə təhsil alaraq, gələcəkdə iş dünyasında uğurlu bir karyera qurmaq mümkündür.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Universitetimizin Görkəmli Anları</h2>
+    <div class="image-gallery">
+      <img src="https://via.placeholder.com/300x200" alt="Görüş" />
+      <img src="https://via.placeholder.com/300x200" alt="Tədris" />
+      <img src="https://via.placeholder.com/300x200" alt="Laboratoriya" />
+      <img src="https://via.placeholder.com/300x200" alt="Tədbir" />
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tələbə Sistemi. Bütün hüquqlar qorunur.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const profileMenu = document.querySelector('.profile-menu');
+      profileMenu.classList.toggle('active');
+    }
+
+    function saveProfileData() {
+      const profileData = {
+        username: 'İsmayıl',
+        email: 'ismayil@example.com',
+        age: 22,
+      };
+      localStorage.setItem('userProfile', JSON.stringify(profileData));
+    }
+
+    function logout() {
+      localStorage.removeItem('loggedIn');
+      localStorage.removeItem('userProfile');
+      window.location.href = 'login.html';
+    }
+
+    document.getElementById('dashboard-link').addEventListener('click', function(event) {
+      saveProfileData();
+    });
+
+    document.getElementById('logout-link').addEventListener('click', function(event) {
+      logout();
+    });
+    
+  </script>
+</body>
+</html>

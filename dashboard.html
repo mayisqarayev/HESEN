@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Tələbə Sistemi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      background-color: #f0f2f5;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #2e86de;
+      color: white;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding-left: 20px;
+    }
+
+    .sidebar h2 {
+      text-align: left;
+      margin-left: 10px;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .sidebar a:hover {
+      background-color: #1c5fa0;
+    }
+
+    .main {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .main h2 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .info-box {
+      background-color: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 600px;
+      position: relative;
+    }
+
+    .profile-photo {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #2e86de;
+      position: absolute;
+      top: -50px;
+      right: 25px;
+      background-color: white;
+    }
+
+    .info-item {
+      margin-bottom: 15px;
+      font-size: 17px;
+    }
+
+    .info-item strong {
+      display: inline-block;
+      width: 180px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Menü</h2>
+    <a href="home_page.html">Ana səhifə</a>
+    <a href="qiymetler.html">Qiymətlər</a>
+    <a href="fennler.html">Fənlər</a>
+    <a href="#" onclick="logout()">Çıxış</a>
+  </div>
+
+  <div class="main">
+    <h2>Tələbə Məlumatları</h2>
+    <div class="info-box">
+      <img src="https://via.placeholder.com/100" alt="Profil şəkli" class="profile-photo">
+      <div class="info-item"><strong>Ad və Soyad:</strong> Əli Məmmədov</div>
+      <div class="info-item"><strong>Tələbə ID:</strong> 2025001</div>
+      <div class="info-item"><strong>FIN kodu:</strong> 8A9D7B2F</div>
+      <div class="info-item"><strong>Cinsi:</strong> Kişi</div>
+      <div class="info-item"><strong>Ixtisas:</strong> Kompüter mühəndisliyi</div>
+      <div class="info-item"><strong>Təhsil forması:</strong> Əyani</div>
+      <div class="info-item"><strong>Qəbul ili:</strong> 2022</div>
+      <div class="info-item"><strong>İstifadəçi tipi:</strong> Tələbə</div>
+      <div class="info-item"><strong>Təhsil pilləsi:</strong> Bakalavr</div>
+    </div>
+  </div>
+
+  <script>
+    if (localStorage.getItem('loggedIn') !== 'true') {
+      window.location.href = 'login.html';
+    }
+
+    function logout() {
+      localStorage.removeItem('loggedIn');
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>

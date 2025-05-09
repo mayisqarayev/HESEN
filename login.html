@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Tələbə Sistemi</title>
+  <style>
+    body {
+      background-color: #f0f2f5;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 400px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #2e86de;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #2165a5;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Tələbə Girişi</h2>
+    <input type="text" id="username" placeholder="İstifadəçi adı">
+    <input type="password" id="password" placeholder="Şifrə">
+    <button onclick="login()">Daxil ol</button>
+    <div class="error" id="error"></div>
+  </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const errorDiv = document.getElementById('error');
+
+      if (username === 'student' && password === '1234') {
+        localStorage.setItem('loggedIn', 'true');
+        window.location.href = 'home_page.html';
+      } else {
+        errorDiv.textContent = 'İstifadəçi adı və ya şifrə yanlışdır.';
+      }
+    }
+
+    if (localStorage.getItem('loggedIn') === 'true') {
+      window.location.href = 'home_page.html';
+    }
+  </script>
+</body>
+</html>
