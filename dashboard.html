@@ -31,15 +31,6 @@
     </div>
   </div>
 
-  <script>
-    if (localStorage.getItem('loggedIn') !== 'true') {
-      window.location.href = 'login.html';
-    }
-
-    function logout() {
-      localStorage.removeItem('loggedIn');
-      window.location.href = 'login.html';
-    }
-  </script>
+  <script src="/scripts/dashboard.js"></script>
 </body>
 </html>
