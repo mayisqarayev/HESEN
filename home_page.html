@@ -1,57 +1,71 @@
 <!DOCTYPE html>
 <html lang="az">
-<head>
-  <meta charset="UTF-8">
-  <title>Ana Səhifə - Tələbə Sistemi</title>
-  <link rel="stylesheet" href="css/home_page.css">
-</head>
-<body>
-  <header>
-    <div class="logo">Tələbə Sistemi</div>
-    <nav>
-      <a href="home.html">Ana Səhifə</a>
-      <a href="about.html">Haqqımızda</a>
-      <a href="courses.html">Tədris Proqramları</a>
-      <a href="contact.html">Əlaqə</a>
-    </nav>
-    <div class="profile-menu" onclick="toggleMenu()">
-      <img src="https://via.placeholder.com/40" alt="Profil şəkli">
-      <div class="username">İsmayıl</div>
-      <div class="sub-menu">
-        <a href="dashboard.html" id="dashboard-link">Dashboard</a>
-        <a href="login.html" id="logout-link">Çıxış</a>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ana Səhifə - Tələbə Sistemi</title>
+    <link rel="stylesheet" href="css/home_page.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Tələbə Sistemi</div>
+      <nav>
+        <a href="home.html">Ana Səhifə</a>
+        <a href="#about">Haqqımızda</a>
+        <a href="courses.html">Tədris Proqramları</a>
+        <a href="contact.html">Əlaqə</a>
+      </nav>
+      <div class="profile-menu" onclick="toggleMenu()">
+        <div class="img"></div>
+        <div class="username">Həsən</div>
+        <div class="sub-menu">
+          <a href="dashboard.html" id="dashboard-link">Dashboard</a>
+          <a href="login.html" id="logout-link">Çıxış</a>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <section class="hero-section">
-    <div>
-      <h2>Universitetə Xoş Gəlmisiniz</h2>
-      <p>Gələcəyiniz burada başlayır</p>
-    </div>
-  </section>
+    <section class="hero-section">
+      <div class="black">
+        <h2>Universitetə Xoş Gəlmisiniz</h2>
+        <p>Gələcəyiniz burada başlayır</p>
+      </div>
+    </section>
 
-  <section class="section">
-    <h2>Haqqımızda</h2>
-    <p>
-      Biz, yüksək keyfiyyətli təhsil və müasir metodlarla tələbələrə bir çox imkanlar təqdim edirik. Universitetimizdə müxtəlif sahələrdə təhsil alaraq, gələcəkdə iş dünyasında uğurlu bir karyera qurmaq mümkündür.
-    </p>
-  </section>
+    <section class="section about-us" id="about">
+      <h2>Haqqımızda</h2>
+      <p>
+        Biz, yüksək keyfiyyətli təhsil və müasir metodlarla tələbələrə bir çox
+        imkanlar təqdim edirik. Universitetimizdə müxtəlif sahələrdə təhsil
+        alaraq, gələcəkdə iş dünyasında uğurlu bir karyera qurmaq mümkündür.
+      </p>
+    </section>
 
-  <section class="section">
-    <h2>Universitetimizin Görkəmli Anları</h2>
-    <div class="image-gallery">
-      <img src="https://via.placeholder.com/300x200" alt="Görüş" />
-      <img src="https://via.placeholder.com/300x200" alt="Tədris" />
-      <img src="https://via.placeholder.com/300x200" alt="Laboratoriya" />
-      <img src="https://via.placeholder.com/300x200" alt="Tədbir" />
-    </div>
-  </section>
+    <section class="section">
+      <h2>Universitetimizin Görkəmli Anları</h2>
+      <div class="image-gallery">
+        <img
+          src="../assets/img/cbbc98ed05f26e9b921dfc69cbdb9344.jpg"
+          alt="Görüş"
+        />
+        <img
+          src="../assets/img/8860021daa2014c3818d736d0dd244e4.jpg"
+          alt="Tədris"
+        />
+        <img
+          src="../assets/img/aaafaebe0df2e06bb08f63cb4271666b.jpg"
+          alt="Laboratoriya"
+        />
+        <img
+          src="../assets/img/8abd61fd792201f3c6c31a50337954bd.jpg"
+          alt="Tədbir"
+        />
+      </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Tələbə Sistemi. Bütün hüquqlar qorunur.</p>
-  </footer>
+    <footer>
+      <p>&copy; 2025 Tələbə Sistemi. Bütün hüquqlar qorunur.</p>
+    </footer>
 
-  <script src="/scripts/home_page.js"></script>
-</body>
+    <script src="/scripts/home_page.js"></script>
+  </body>
 </html>
