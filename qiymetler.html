@@ -1,63 +1,61 @@
 <!DOCTYPE html>
 <html lang="az">
-<head>
-  <meta charset="UTF-8">
-  <title>Qiymətlər - Tələbə Sistemi</title>
-  <link rel="stylesheet" href="css/qiymetler.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Qiymətlər - Tələbə Sistemi</title>
+    <link rel="stylesheet" href="css/qiymetler.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>Menu</h2>
+      <a href="home_page.html">Ana səhifə</a>
+      <a href="qiymetler.html">Qiymətlər</a>
+      <a href="fennler.html">Fənnlər</a>
+      <a href="#" onclick="logout()">Çıxış</a>
+    </div>
 
-<div class="sidebar">
-  <h2>Menü</h2>
-  <a href="home_page.html">Ana səhifə</a>
-  <a href="qiymetler.html">Qiymətlər</a>
-  <a href="fennler.html">Fənnlər</a>
-  <a href="dashboard.html">Dashboard</a>
-  <a href="#" onclick="logout()">Çıxış</a>
-</div>
+    <div class="main">
+      <h2>Qiymətlər</h2>
 
-<div class="main">
-  <h2>Qiymətlər</h2>
+      <div class="filters">
+        <label for="semestr">Semestr:</label>
+        <select id="semestr" onchange="loadGrades()">
+          <option value="qis">Qış</option>
+          <option value="yay">Yay</option>
+        </select>
 
-  <div class="filters">
-    <label for="semestr">Semestr:</label>
-    <select id="semestr" onchange="loadGrades()">
-      <option value="qis">Qış</option>
-      <option value="yay">Yay</option>
-    </select>
+        <label for="kurs">Kurs:</label>
+        <select id="kurs" onchange="loadGrades()">
+          <option value="1">1-ci kurs</option>
+          <option value="2">2-ci kurs</option>
+          <option value="3">3-cü kurs</option>
+          <option value="4">4-cü kurs</option>
+        </select>
+      </div>
 
-    <label for="kurs">Kurs:</label>
-    <select id="kurs" onchange="loadGrades()">
-      <option value="1">1-ci kurs</option>
-      <option value="2">2-ci kurs</option>
-      <option value="3">3-cü kurs</option>
-      <option value="4">4-cü kurs</option>
-    </select>
-  </div>
+      <table id="gradesTable">
+        <thead>
+          <tr>
+            <th>Fənn</th>
+            <th>Müəllim</th>
+            <th>Kredit</th>
+            <th>İmtahana qədər</th>
+            <th>İmtahan</th>
+            <th>Yekun bal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dinamik doldurulacaq -->
+        </tbody>
+      </table>
 
-  <table id="gradesTable">
-    <thead>
-      <tr>
-        <th>Fənn</th>
-        <th>Müəllim</th>
-        <th>Kredit</th>
-        <th>İmtahana qədər</th>
-        <th>İmtahan</th>
-        <th>Yekun bal</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Dinamik doldurulacaq -->
-    </tbody>
-  </table>
+      <div class="gpa-box">
+        Seçilmiş semestr üçün GPA: <span id="gpaValue">0.00</span><br />
+        Kurs üzrə ortalama GPA: <span id="courseGpaValue">0.00</span><br />
+        Yekun GPA (1-4 kurs): <span id="finalGpaValue">0.00</span>
+      </div>
+    </div>
 
-  <div class="gpa-box">
-    Seçilmiş semestr üçün GPA: <span id="gpaValue">0.00</span><br>
-    Kurs üzrə ortalama GPA: <span id="courseGpaValue">0.00</span><br>
-    Yekun GPA (1-4 kurs): <span id="finalGpaValue">0.00</span>
-  </div>
-</div>
-
-<script src="/scripts/qiymetler.js"></script>
-</body>
+    <script src="/scripts/qiymetler.js"></script>
+  </body>
 </html>

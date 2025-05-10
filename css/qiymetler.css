@@ -1,78 +1,80 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    height: 100vh;
-    background-color: #f0f2f5;
-  }
-  .sidebar {
-    width: 220px;
-    background-color: #2e86de;
-    color: white;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding-left: 20px;
-  }
-  .sidebar h2 {
-    text-align: left;
-    margin-left: 10px;
-  }
-  .sidebar a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px;
-    display: block;
-    border-radius: 4px;
-  }
-  .sidebar a:hover {
-    background-color: #1c5fa0;
-  }
-  .main {
-    flex: 1;
-    padding: 30px;
-  }
-  h2 {
-    margin-bottom: 20px;
-    color: #333;
-  }
-  .filters {
-    margin-bottom: 20px;
-  }
-  .filters label {
-    margin-right: 10px;
-    font-weight: bold;
-  }
-  .filters select {
-    margin-right: 20px;
-    padding: 5px 10px;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  th, td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: center;
-  }
-  th {
-    background-color: #2e86de;
-    color: white;
-  }
-  .gpa-box {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 400px;
-    font-size: 18px;
-  }
-  .gpa-box span {
-    font-weight: bold;
-    color: #2e86de;
-  }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+.sidebar {
+  width: 220px;
+  background-color: #2e86de;
+  color: white;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 20px;
+}
+.sidebar h2 {
+  text-align: left;
+  margin-left: 10px;
+  color: white;
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  display: block;
+  border-radius: 4px;
+}
+.sidebar a:hover {
+  background-color: #1c5fa0;
+}
+.main {
+  flex: 1;
+  padding: 30px;
+}
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+.filters {
+  margin-bottom: 20px;
+}
+.filters label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+.filters select {
+  margin-right: 20px;
+  padding: 5px 10px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+th {
+  background-color: #2e86de;
+  color: white;
+}
+.gpa-box {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  font-size: 18px;
+}
+.gpa-box span {
+  font-weight: bold;
+  color: #2e86de;
+}

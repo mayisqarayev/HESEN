@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html lang="az">
-<head>
-  <meta charset="UTF-8">
-  <title>Fənnlər - Tələbə Sistemi</title>
-  <link rel="stylesheet" href="/css/fennler.css">
-</head>
-<body>
-  <div class="sidebar">
-    <h2>Menü</h2>
-    <a href="home_page.html" id="homeLink">Ana səhifə</a>
-    <a href="qiymetler.html">Qiymətlər</a>
-    <a href="fennler.html">Fənnlər</a>
-    <a href="dashboard.html" id="dashboardLink">Dashboard</a>
-    <a href="#" onclick="logout()">Çıxış</a>
-  </div>
-
-  <div class="main">
-    <h2>Fənnlər</h2>
-
-    <div class="filters">
-      <label for="semestr">Semestr:</label>
-      <select id="semestr" onchange="loadSubjects()">
-        <option value="qis">Qış</option>
-        <option value="yay">Yay</option>
-      </select>
-
-      <label for="kurs">Kurs:</label>
-      <select id="kurs" onchange="loadSubjects()">
-        <option value="1">1-ci kurs</option>
-        <option value="2">2-ci kurs</option>
-        <option value="3">3-cü kurs</option>
-        <option value="4">4-cü kurs</option>
-      </select>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fənnlər - Tələbə Sistemi</title>
+    <link rel="stylesheet" href="/css/fennler.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>Menu</h2>
+      <a href="home_page.html" id="homeLink">Ana səhifə</a>
+      <a href="qiymetler.html">Qiymətlər</a>
+      <a href="fennler.html">Fənnlər</a>
+      <a href="#" onclick="logout()">Çıxış</a>
     </div>
 
-    <div class="subject-container" id="subjectContainer">
-    </div>
-  </div>
+    <div class="main">
+      <h2>Fənnlər</h2>
 
-  <script src="/scripts/fennler.js"></script>
-</body>
+      <div class="filters">
+        <label for="semestr">Semestr:</label>
+        <select id="semestr" onchange="loadSubjects()">
+          <option value="qis">Qış</option>
+          <option value="yay">Yay</option>
+        </select>
+
+        <label for="kurs">Kurs:</label>
+        <select id="kurs" onchange="loadSubjects()">
+          <option value="1">1-ci kurs</option>
+          <option value="2">2-ci kurs</option>
+          <option value="3">3-cü kurs</option>
+          <option value="4">4-cü kurs</option>
+        </select>
+      </div>
+
+      <div class="subject-container" id="subjectContainer"></div>
+    </div>
+
+    <script src="/scripts/fennler.js"></script>
+  </body>
 </html>
