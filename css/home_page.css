@@ -91,7 +91,7 @@ header nav a:hover {
 }
 .hero-section {
   background-image: url("../assets/img/uniii.jpeg");
-  background-position: center;
+  background-position: top;
   background-size: cover;
   height: 600px;
   color: white;
