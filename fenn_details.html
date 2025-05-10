@@ -1,87 +1,90 @@
 <!DOCTYPE html>
 <html lang="az">
-<head>
-  <meta charset="UTF-8">
-  <title>Fənn Detalları - Tələbə Sistemi</title>
-  <link rel="stylesheet" href="/css/fenn_details.css">
-</head>
-<body>
-
-  <div class="sidebar">
-    <h2>Menü</h2>
-    <a href="home_page.html" id="homeLink">Ana səhifə</a>
-    <a href="qiymetler.html">Qiymətlər</a>
-    <a href="fennler.html">Fənnlər</a>
-    <a href="dashboard.html" id="dashboardLink">Dashboard</a>
-    <a href="#" onclick="logout()">Çıxış</a>
-  </div>
-
-  <div class="main">
-    <h2 id="subjectName">Fənn Adı</h2>
-
-    <div class="tabs">
-      <button class="tab-link active" onclick="showTab('about')">Haqqında</button>
-      <button class="tab-link" onclick="showTab('topics')">Mövzular</button>
-      <button class="tab-link" onclick="showTab('journal')">Elektron Jurnal</button>
-      <button class="tab-link" onclick="showTab('quiz')">Quiz</button>
-      <button class="tab-link" onclick="showTab('midterm')">Midterm</button>
-      <button class="tab-link" onclick="showTab('presentation')">Təqdimat</button>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fənn Detalları - Tələbə Sistemi</title>
+    <link rel="stylesheet" href="/css/fenn_details.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>Menu</h2>
+      <a href="home_page.html" id="homeLink">Ana səhifə</a>
+      <a href="qiymetler.html">Qiymətlər</a>
+      <a href="fennler.html">Fənnlər</a>
+      <a href="#" onclick="logout()">Çıxış</a>
     </div>
 
-    <div class="tab-content about active">
-      <h3>Fənn Haqqında</h3>
-      <p id="subjectDescription"></p>
-    </div>
+    <div class="main">
+      <h2 id="subjectName">Fənn Adı</h2>
 
-    <div class="tab-content topics">
-      <h3>Mövzular</h3>
-      <ul id="topicsList"></ul>
-    </div>
-
-    <div class="tab-content journal">
-      <h3>Elektron Jurnal</h3>
-      <div class="month-buttons">
-        <button onclick="showDays(2)">Fevral</button>
-        <button onclick="showDays(3)">Mart</button>
-        <button onclick="showDays(4)">Aprel</button>
-        <button onclick="showDays(5)">May</button>
-        <button onclick="showDays(6)">İyun</button>
-        <button onclick="showDays(7)">İyul</button>
-        <button onclick="showDays(8)">Avqust</button>
-        <button onclick="showDays(9)">Sentyabr</button>
-        <button onclick="showDays(10)">Oktyabr</button>
-        <button onclick="showDays(11)">Noyabr</button>
-        <button onclick="showDays(12)">Dekabr</button>
+      <div class="tabs">
+        <button class="tab-link active" onclick="showTab('about')">
+          Haqqında
+        </button>
+        <button class="tab-link" onclick="showTab('topics')">Mövzular</button>
+        <button class="tab-link" onclick="showTab('journal')">
+          Elektron Jurnal
+        </button>
+        <button class="tab-link" onclick="showTab('quiz')">Quiz</button>
+        <button class="tab-link" onclick="showTab('midterm')">Midterm</button>
+        <button class="tab-link" onclick="showTab('presentation')">
+          Təqdimat
+        </button>
       </div>
 
-      <div class="day-buttons" id="dayButtons"></div>
+      <div class="tab-content about active">
+        <h3>Fənn Haqqında</h3>
+        <p id="subjectDescription"></p>
+      </div>
 
-      <div class="selection-div" id="selectionDiv">
-        <button class="ie-button" onclick="setSelection('IE')">İE</button>
-        <button class="qb-button" onclick="setSelection('QB')">QB</button>
+      <div class="tab-content topics">
+        <h3>Mövzular</h3>
+        <ul id="topicsList"></ul>
+      </div>
+
+      <div class="tab-content journal">
+        <h3>Elektron Jurnal</h3>
+        <div class="month-buttons">
+          <button onclick="showDays(2)">Fevral</button>
+          <button onclick="showDays(3)">Mart</button>
+          <button onclick="showDays(4)">Aprel</button>
+          <button onclick="showDays(5)">May</button>
+          <button onclick="showDays(6)">İyun</button>
+          <button onclick="showDays(7)">İyul</button>
+          <button onclick="showDays(8)">Avqust</button>
+          <button onclick="showDays(9)">Sentyabr</button>
+          <button onclick="showDays(10)">Oktyabr</button>
+          <button onclick="showDays(11)">Noyabr</button>
+          <button onclick="showDays(12)">Dekabr</button>
+        </div>
+
+        <div class="day-buttons" id="dayButtons"></div>
+
+        <div class="selection-div" id="selectionDiv">
+          <button class="ie-button" onclick="setSelection('IE')">İE</button>
+          <button class="qb-button" onclick="setSelection('QB')">QB</button>
+        </div>
+      </div>
+
+      <div class="tab-content quiz">
+        <h3>Quiz Qiymətləndirmə</h3>
+        <button id="quizScoreButton">0.0</button>
+        <div id="scoreSelector" class="score-buttons"></div>
+      </div>
+
+      <div class="tab-content midterm">
+        <h3>Midterm Qiymətləndirmə</h3>
+        <button id="midtermScoreButton">0.0</button>
+        <div id="midtermScoreSelector" class="score-buttons"></div>
+      </div>
+
+      <div class="tab-content presentation">
+        <h3>Təqdimat Qiymətləndirmə</h3>
+        <button id="presentationScoreButton">0.0</button>
+        <div id="presentationScoreSelector" class="score-buttons"></div>
       </div>
     </div>
 
-    <div class="tab-content quiz">
-      <h3>Quiz Qiymətləndirmə</h3>
-      <button id="quizScoreButton">0.0</button>
-      <div id="scoreSelector" class="score-buttons"></div>
-    </div>
-
-    <div class="tab-content midterm">
-      <h3>Midterm Qiymətləndirmə</h3>
-      <button id="midtermScoreButton">0.0</button>
-      <div id="midtermScoreSelector" class="score-buttons"></div>
-    </div>
-
-    <div class="tab-content presentation">
-      <h3>Təqdimat Qiymətləndirmə</h3>
-      <button id="presentationScoreButton">0.0</button>
-      <div id="presentationScoreSelector" class="score-buttons"></div>
-    </div>
-
-  </div>
-
-  <script src="/scripts/fenn_details.js"></script>
-</body>
+    <script src="/scripts/fenn_details.js"></script>
+  </body>
 </html>
